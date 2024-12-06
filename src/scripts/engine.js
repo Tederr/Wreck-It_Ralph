@@ -21,13 +21,14 @@ const statusGame ={
 
 function contagemRegresiva(){
     statusGame.values.tempoAtual--;
-    statusGame.values.velocidadeDoGame = statusGame.values.velocidadeDoGame - 5;
+    statusGame.values.velocidadeDoGame = statusGame.values.velocidadeDoGame - 1;
     statusGame.view.tempo.textContent = statusGame.values.tempoAtual;
 
     if(statusGame.values.tempoAtual === 0){
         clearInterval(statusGame.actions.contagemRegresivaDoTempoId);
         clearInterval(moverInimigo);
         alert("FIM DE JOGO! Seu resultado foi: " + statusGame.values.resultado);
+        window.location.href = "/index.html";
         
     }
 }
