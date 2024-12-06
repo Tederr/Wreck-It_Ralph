@@ -1,0 +1,51 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
+    height: 100vh;
+    width: 100%;
+    align-items: center;
+    padding-top: 1rem;
+
+    .logo{
+        border: 5px ridge #ffffff;
+        color: #ffffff;
+        width: 20rem;
+
+        h1{
+            padding: 1rem;
+            text-align: center;
+        }
+    }
+
+    .botao{
+        margin-top: 4rem;
+        margin-bottom: 6rem;
+
+        button{
+            color: #ffffff;
+            background-color: #0000ff;
+            border-radius: 4px;
+            font-size: 40px;
+            padding: 30px 40px;
+            cursor: pointer;
+        }
+
+        button:houver{
+            background-color: #ffffff;
+        }
+    }
+
+    .fundo{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+
+        .final{
+            background-image: url("../img/wall.png");
+            width: 100%;
+            height: 37vh;
+        }
+    }
+}
