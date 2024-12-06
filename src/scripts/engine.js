@@ -34,9 +34,28 @@ function contagemRegresiva(){
 }
 
 function playMusica(audioNome){
-    let audio = new Audio(`./src/audios/${audioNome}.m4a`);
+    let audio = new Audio(`./src/audios/${audioNome}.mp3`);
     audio.volume = 0.1;
     audio.play();
+}
+
+function iniciarMusica(audioNome) {
+    let audio = localStorage.getItem("audio")
+      ? JSON.parse(localStorage.getItem("audio"))
+      : null;
+    
+    if (!audio) {
+      audio = new Audio(`./src/audios/${audioNome}.mp3`);
+      audio.volume = 0.1;
+      audio.loop = true;
+      audio.play();
+      localStorage.setItem("musica", JSON.stringify({ playing: true }));
+    } else if (audio.playing) {
+      audio = new Audio(`./src/audios/${audioNome}.mp3`);
+      audio.volume = 0.1;
+      audio.loop = true;
+      audio.play();
+    }
 }
 
 function quadradoAleatorio(){
@@ -78,7 +97,7 @@ function addListenerHitBox(){
 function iniciar(){
     moverInimigo();
     addListenerHitBox();
-    playMusica("boosFith");
+    iniciarMusica("boosFith");
 }
 
 iniciar();
