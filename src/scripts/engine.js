@@ -28,7 +28,7 @@ function contagemRegresiva(){
         clearInterval(statusGame.actions.contagemRegresivaDoTempoId);
         clearInterval(moverInimigo);
         alert("FIM DE JOGO! Seu resultado foi: " + statusGame.values.resultado);
-        window.location.href = "/index.html";
+        window.location.href = "https://tederr.github.io/Wreck-It_Ralph/"
         
     }
 }
@@ -68,7 +68,7 @@ function addListenerHitBox(){
                 playMusica("gameOver") 
                 if(statusGame.values.vidasRestantes === 0){
                     alert("FIM DE JOGO! Seu resultado foi: " + statusGame.values.resultado);
-                    window.location.href = "/index.html"
+                    window.location.href = "https://tederr.github.io/Wreck-It_Ralph/"
                 }
             }
         })
